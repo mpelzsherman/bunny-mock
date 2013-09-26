@@ -40,7 +40,7 @@ class BunnyMock
   class Channel
     def queue(name, attrs = {})
       @queues ||= []
-      @queues << Queue.new(name, attrs)
+      Queue.new(name, attrs).tap { |q| @queues << q }
     end
   end
 
@@ -63,6 +63,10 @@ class BunnyMock
         self.delivery_count += 1
         yield({:payload => message})
       end
+    end
+
+    def publish(msg)
+      self.messages << msg
     end
 
     def default_consumer
