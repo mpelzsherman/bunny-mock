@@ -1,18 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rake', :require => false
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :development do
-  gem 'simplecov'
-  gem 'pry'
-end
-
-group :test do
-  gem 'rspec'
-  gem 'rspec-given'
-  gem 'guard-rspec'
-  gem 'rb-fsevent'
-end
+# Specify your gem's dependencies in bunny_mock.gemspec
+gemspec

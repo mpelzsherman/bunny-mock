@@ -1,3 +1,5 @@
+require "bunny_mock/version"
+
 class BunnyMock
 
   def start
@@ -12,6 +14,14 @@ class BunnyMock
     nil
   end
 
+  def channels
+    @channels ||= []
+  end
+
+  def create_channel
+    Channel.new.tap{|c| channels << c}
+  end
+
   def queue(*attrs)
     BunnyMock::Queue.new(*attrs)
   end
@@ -24,6 +34,13 @@ class BunnyMock
     attr_accessor :message_count
     def initialize(c)
       self.message_count = c
+    end
+  end
+
+  class Channel
+    def queue(name, attrs = {})
+      @queues ||= []
+      @queues << Queue.new(name, attrs)
     end
   end
 
