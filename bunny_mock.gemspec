@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = BunnyMock::VERSION
   spec.authors       = ["svs"]
   spec.email         = ["svs@svs.io"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Mocking library for Bunny}
+  spec.summary       = %q{Easily mock the bunny gem and pretend you have RabbitMQ running. }
   spec.homepage      = ""
   spec.license       = "MIT"
 
