@@ -38,10 +38,13 @@ class BunnyMock
   end
 
   class Channel
+    attr_reader :queues
     def queue(name, attrs = {})
       @queues ||= []
       Queue.new(name, attrs).tap { |q| @queues << q }
     end
+
+
   end
 
   class Queue

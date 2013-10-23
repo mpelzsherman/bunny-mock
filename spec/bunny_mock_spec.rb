@@ -87,11 +87,11 @@ describe BunnyMock do
       Then { bunny.channels.count.should == 1 }
     end
     describe "channel queues" do
+      Given(:c) { bunny.create_channel }
       When(:queues) {
-        c = bunny.create_channel
         c.queue("foo", {:bar => :baz})
       }
-      Then { queues.first.should be_a BunnyMock::Queue }
+      Then { c.queues.first.should be_a BunnyMock::Queue }
     end
   end
 
