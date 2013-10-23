@@ -1,4 +1,5 @@
 # Overview
+[![Code Climate](https://codeclimate.com/github/svs/bunny-mock.png)](https://codeclimate.com/github/svs/bunny-mock) [![Build Status](https://travis-ci.org/svs/bunny-mock.png?branch=master)](https://travis-ci.org/svs/bunny-mock)
 
 This is a brain-dead-simple mock for the `Bunny` class provided by the [bunny gem](https://github.com/ruby-amqp/bunny), which is a synchronous Ruby RabbitMQ client. If you want to mock out RabbitMQ in your tests and are currently using Bunny, this might be the tool for you.
 
