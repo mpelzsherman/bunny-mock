@@ -1,18 +1,10 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rake', :require => false
+gemspec
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :development do
-  gem 'simplecov'
+group :test, :development do
   gem 'pry'
-end
-
-group :test do
-  gem 'rspec'
-  gem 'rspec-given'
+  gem 'pry-nav'
+  gem 'rspec', '2.14'
   gem 'guard-rspec'
-  gem 'rb-fsevent'
 end

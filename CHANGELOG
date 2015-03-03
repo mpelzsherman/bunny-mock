@@ -1,0 +1,23 @@
+*0.0.5* (March 2, 2015)
+
+* RentPath enhancements:
+  * BunnyMock is now a module
+  * Added support for named queues and exchanges
+
+
+*0.0.4* (July 08, 2014)
+
+* Add Channel#fanout
+
+*0.0.3* (June 17, 2014)
+
+* Added the 'close' method on Bunny.
+
+*0.0.2* (June 12, 2014)
+
+* Reworked Scott Bradley's code to use newer RSpec version.
+* Added a .gemspec file
+* Added my midwire_common gem to automate version:bump tasks
+* Added a LICENSE.txt file
+* Added this CHANGELOG file
+* Added a NOTES.md file
